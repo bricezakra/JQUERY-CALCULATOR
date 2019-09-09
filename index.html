@@ -118,10 +118,20 @@
 
             $('.equal').on('click', function() {
                 if(operator === "+") {
-                  console.log('we are in');
                   answer = firstNumber + secondNumber;
-                  console.log(answer);
+                } else if(operator === '-') {
+                  answer = firstNumber - secondNumber;
+
+                } else if(operator === '*') {
+                  answer = firstNumber * secondNumber;
+                  
+                } else if(operator === '/') {
+                  answer = firstNumber / secondNumber;
+
+                } else if(operator === '^') {
+                  answer = firstNumber ^ secondNumber;
                 }
+              $('#result').text(answer);
             })
 
 
