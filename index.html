@@ -134,10 +134,23 @@
               $('#result').text(answer);
             })
 
+            $('.clear').on('click', function(){
+              onSecondNumber = false;
 
+              operator = "";
 
-          
+              firstNumberArray = [];
 
+              secondNumberArray = [];
+
+              $('#result').text("");
+
+              $('#first-number').text("");
+
+              $('#second-number').text("");
+
+              $('#operator').text("");
+            });
 
         });
     </script>
