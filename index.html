@@ -79,7 +79,35 @@
 
     $(document).ready(function () {
 
+      var firstNumberArray = [];
 
+      var secondNumberArray = [];
+
+      var operator;
+
+      var firstNumber;
+
+      var secondNumber;
+
+      var onSecondNumber = false;
+
+      $('.number').on('click', function(){
+        var btnValue = this.value;
+        
+        if(onSecondNumber === true){
+          secondNumberArray.push(btnValue);
+          secondNumber = secondNumberArray.join("");
+          $('#second-number').text(secondNumber);
+        } else {
+          firstNumberArray.push(btnValue);
+          firstNumber = firstNumberArray.join("");
+          $('#first-number').text(firstNumber);
+        }
+      });
+
+      $('.operator').on('click', function(){
+
+      })
 
 
     });
