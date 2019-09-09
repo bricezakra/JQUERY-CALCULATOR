@@ -98,11 +98,12 @@
 
                 if (onSecondNumber === true) {
                     secondNumberArray.push(btnValue);
-                    secondNumber = secondNumberArray.join("");
+                    secondNumber = parseInt(secondNumberArray.join(""));
                     $('#second-number').text(secondNumber);
                 } else {
                     firstNumberArray.push(btnValue);
-                    firstNumber = firstNumberArray.join("");
+                    firstNumber = parseInt(firstNumberArray.join(""));
+                    console.log(firstNumber);
                     $('#first-number').text(firstNumber);
                 }
             });
@@ -116,8 +117,11 @@
             })
 
             $('.equal').on('click', function() {
-                answer = firstNumber + operator + secondNumber;
-                console.log(answer)
+                if(operator === "+") {
+                  console.log('we are in');
+                  answer = firstNumber + secondNumber;
+                  console.log(answer);
+                }
             })
 
 
