@@ -90,6 +90,9 @@
 
             var onSecondNumber = false;
 
+            var answer;
+           
+
             $('.number').on('click', function() {
                 var btnValue = this.value;
 
@@ -111,6 +114,15 @@
 
                 $('#operator').text(operator);
             })
+
+            $('.equal').on('click', function() {
+                answer = firstNumber + operator + secondNumber;
+                console.log(answer)
+            })
+
+
+
+          
 
 
         });
